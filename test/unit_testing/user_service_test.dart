@@ -42,7 +42,7 @@ void main() {
       when(mockSecureStorage.retrieve('authToken'))
           .thenAnswer((_) async => 'Bearer token');
       when(mockClient
-          .get(Uri.parse('http://{replace me}:3000/v1/api/user'), headers: {
+          .get(Uri.parse('http://localhost:4000:3000/v1/api/user'), headers: {
         "content-type": "application/json",
         'Authorization': 'Bearer token',
       })).thenThrow(Exception('error'));
@@ -56,7 +56,7 @@ void main() {
       when(mockSecureStorage.retrieve('authToken'))
           .thenAnswer((_) async => 'Bearer token');
       when(mockClient
-          .get(Uri.parse('http://{replace me}:3000/v1/api/user'), headers: {
+          .get(Uri.parse('http://localhost:4000:3000/v1/api/user'), headers: {
         "content-type": "application/json",
         'Authorization': 'Bearer token',
       })).thenAnswer((_) async => http.Response('Invalid request', 400));
@@ -70,7 +70,7 @@ void main() {
       when(mockSecureStorage.retrieve('authToken'))
           .thenAnswer((_) async => 'Bearer token');
       when(mockClient
-          .get(Uri.parse('http://{replace me}:3000/v1/api/user'), headers: {
+          .get(Uri.parse('http://localhost:4000:3000/v1/api/user'), headers: {
         "content-type": "application/json",
         'Authorization': 'Bearer token',
       })).thenAnswer((_) async => http.Response('Unauthorised', 401));
@@ -85,7 +85,7 @@ void main() {
       when(mockSecureStorage.retrieve('authToken'))
           .thenAnswer((_) async => 'Bearer token');
       when(mockClient
-          .get(Uri.parse('http://{replace me}:3000/v1/api/user'), headers: {
+          .get(Uri.parse('http://localhost:4000:3000/v1/api/user'), headers: {
         "content-type": "application/json",
         'Authorization': 'Bearer token',
       })).thenAnswer((_) async => http.Response('', 200));
@@ -99,7 +99,7 @@ void main() {
       when(mockSecureStorage.retrieve('authToken'))
           .thenAnswer((_) async => 'Bearer token');
       when(mockClient
-          .get(Uri.parse('http://{replace me}:3000/v1/api/user'), headers: {
+          .get(Uri.parse('http://localhost:4000:3000/v1/api/user'), headers: {
         "content-type": "application/json",
         'Authorization': 'Bearer token',
       })).thenAnswer((_) async => http.Response('{"name"}', 200));
@@ -113,7 +113,7 @@ void main() {
       when(mockSecureStorage.retrieve('authToken'))
           .thenAnswer((_) async => 'Bearer token');
       when(mockClient
-          .get(Uri.parse('http://{replace me}:3000/v1/api/user'), headers: {
+          .get(Uri.parse('http://localhost:4000:3000/v1/api/user'), headers: {
         "content-type": "application/json",
         'Authorization': 'Bearer token',
       })).thenAnswer((_) async => http.Response(
